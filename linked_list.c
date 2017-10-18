@@ -38,13 +38,12 @@ struct node * insert_order(char * song, char * singer){
 */
 struct node * find_song(struct node* h,char * title, char * artist){
   
-  while(h && h->artist != artist && h->name != title){
-    // print_node(h);
-    h = h->next;
+  while(strcmp(h->name,title)&&strcmp(h->artist,artist)){
+    h=h->next;
   }
-  print_node(h);
   return h;
-}
+
+  }
 /*
 struct node * find_song(char * title, char * artist){
   char * start_char;

@@ -12,9 +12,9 @@ void print_list(struct node*);//done
 
 struct node * insert_front(struct node *, char *,char *);
 
-struct node * insert_order(struct node *, char *);
+struct node * insert_order(char *, char *);
 
-struct node * find_song(struct node *, char *);
+struct node * find_song(char *, char *);
 
 struct node * find_first_artist_song(struct node*, char *);
 

@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
+#include <string.h>
 #include <time.h>
 #include "headers.h"
 
-/*
-insert nodes in order
-find and return a pointer to an individual song based on song name
-find and return a pointer to the first song of an artist based on artist name
-Return a pointer to random element in the list.
-remove a single node from the list
- */
 
 void print_list(struct node * ptr){
   while (ptr){//null= false`
@@ -20,14 +13,14 @@ void print_list(struct node * ptr){
   printf("NULL\n");
 }
 
-struct node * insert_front(struct node * n, char * song, char * by){
+struct node * insert_front(struct node * n, char * song, char * singer){
   struct node * head = (struct node *)malloc(sizeof(struct node));
-  head->name= song;
-  head-> artist= by;
+  strcpy(head->name, song);
+  strcpy(head->artist, singer);
   head->next= n;
   return head;
 }
-
+/*
 struct node * insert_order(char * song, char * singer){
   char * star_char;
   strncpy(start_char,singer,1);
@@ -39,7 +32,7 @@ struct node * insert_order(char * song, char * singer){
   while(tmp){
     while(!(strcmp(tmp, start_char))){
       
-      if(
+      if()
     }
   }
 }
@@ -47,8 +40,8 @@ struct node * insert_order(char * song, char * singer){
 struct node * find_song(char * title, char * artist){
   char * start_char;
   strncpy(start_char,artist,1);
-  struct node* tmp = table;
-  while(tmp){
+  //struct node* tmp = table;
+  while(table){
     while(!(strcmp(tmp,start_char))){
       
       if(!(strcmp(tmp->name, title))){
@@ -129,3 +122,4 @@ struct node * find_rand(struct node* n){
   }
   
 }
+*/

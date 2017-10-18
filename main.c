@@ -1,33 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "headers.h"
+#include <string.h>
 int main(){
 
-  struct node * tester;
+  struct node * testList;
+  printf("LINKED LIST TESTS\n");
+  printf("===============================\n");
 
-  printf("\n\n\n=====TESTING INSERT_FRONT======\n\n\n");
-  int x=1;
-  while(x<=10){
-    tester= insert_front(tester,x);
-    printf("inserted value %d to list\n",x);
-    x++;    
-  }
-  printf("population complete!!");
+  insert_front(testList,"song1","artist1");
+  printf("Testing print_list:\n");
+  print_list(testList);
 
-  printf("\n\n\n=====TESTING PRINT_LIST======\n\n\n");
-  print_list(tester);
+  printf("===============================\n");
+  printf("Testing print_node:\n");
 
-  printf("\n\n\n=====TESTING FREE_LIST======\n\n\n");
-  
-  printf("after freeing~~~~:\n");
-  printf("printing free_list(tester):\n");
-  print_list(free_list(tester));
-  printf("\n\n");
+  //print_node();
+  printf("===============================\n");
+  printf("Testing find_node\n");
 
-  printf("tester:\n");
-  print_list(tester);
-  
+  printf("===============================\n");
+
+  printf("Testing find_artist\n");
+  printf("===============================\n");
+  printf("Testing songcmp(helper function):\n");
+
+  printf("===============================\n");
+
+  printf("Testing random\n");
+  printf("===============================\n");
+  printf("Testing remove\n");
+  printf("===============================\n");
+  printf("Testing free_list");
+  //free_list()
+  printf("\nlist after free_list:\n");
+  //print_list(testList);
+  printf("===============================\n");
+  printf("MUSIC LIBRARY TESTS");
+  printf("===============================\n");
+
   return 0;
-  
+
   
 }

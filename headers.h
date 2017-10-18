@@ -8,13 +8,13 @@ struct node{
 
 struct node * table[26];
 
-void print_list(struct node*);//done
+void print_list(struct node*);
 
 struct node * insert_front(struct node *, char *,char *);
 
 struct node * insert_order(char *, char *);
 
-struct node * find_song(char *, char *);
+struct node * find_song(struct node*,char *, char *);
 
 struct node * find_first_artist_song(struct node*, char *);
 

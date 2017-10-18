@@ -5,38 +5,47 @@
 #include "headers.h"
 
 
+void print_node(struct node * n){
+  printf("Title: %s\t Artist: %s\n",n->name,n->artist);
+  }
 void print_list(struct node * ptr){
   while (ptr){//null= false`
-    printf("%s ,by  %s -->", ptr->name, ptr-> artist);
+    printf("Title: %s\t Artist: %s \n",ptr-> name, ptr-> artist);
     ptr=ptr->next;
   }
-  printf("NULL\n");
+  printf("null\n");
 }
 
 struct node * insert_front(struct node * n, char * song, char * singer){
   struct node * head = (struct node *)malloc(sizeof(struct node));
   strcpy(head->name, song);
   strcpy(head->artist, singer);
-  head->next= n;
+  printf("\ninserted %s\n", head->name);
+  //printf("Title: %s\t Artist: %s \n",head-> name, head-> artist);
+  head->next= n;  
   return head;
 }
 /*
 struct node * insert_order(char * song, char * singer){
-  char * star_char;
+  char * start_char;
   strncpy(start_char,singer,1);
   struct node new;
   new.name = song;
   new.artist = singer;
   new.next = 0;
   struct node * tmp = table;
-  while(tmp){
-    while(!(strcmp(tmp, start_char))){
-      
-      if()
-    }
   }
+*/
+struct node * find_song(struct node* h,char * title, char * artist){
+  
+  while(h && h->artist != artist && h->name != title){
+    // print_node(h);
+    h = h->next;
+  }
+  print_node(h);
+  return h;
 }
-
+/*
 struct node * find_song(char * title, char * artist){
   char * start_char;
   strncpy(start_char,artist,1);

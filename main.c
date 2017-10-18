@@ -8,17 +8,25 @@ int main(){
   printf("LINKED LIST TESTS\n");
   printf("===============================\n");
 
-  insert_front(testList,"song1","artist1");
+  testList= insert_front(testList,"song1","artist1");
+  testList=  insert_front(testList,"song2","artist2");
+  testList= insert_front(testList,"song3","artist3");
+  
   printf("Testing print_list:\n");
   print_list(testList);
 
-  printf("===============================\n");
+  /* printf("===============================\n");
   printf("Testing print_node:\n");
 
   //print_node();
+  */  
   printf("===============================\n");
-  printf("Testing find_node\n");
-
+  printf("Testing find_song\n");
+  
+  find_song(testList,"song3","artist3");
+  
+  
+  /*
   printf("===============================\n");
 
   printf("Testing find_artist\n");
@@ -38,7 +46,7 @@ int main(){
   printf("===============================\n");
   printf("MUSIC LIBRARY TESTS");
   printf("===============================\n");
-
+  */
   return 0;
 
   

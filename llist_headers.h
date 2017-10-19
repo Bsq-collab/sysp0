@@ -1,12 +1,9 @@
-//struct node {int i; struct node * next;};
 
 struct node{ 
   char name[256];
   char artist[256];
   struct node *next;
 };
-
-struct node * table[26];
 
 void print_list(struct node*);
 void print_node(struct node*);

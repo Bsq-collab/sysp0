@@ -35,7 +35,6 @@ testList= insert_front(testList,"song4","artist4");
   printf("===============================\n");
   printf("Testing find_song\n");
   
-  // print_list(find_song(testList,"song1","artist1"));
   printf("Finding Song3....\n\n");
   print_list(find_song(testList,"song3","artist3"));
 
@@ -75,10 +74,31 @@ testList= insert_front(testList,"song4","artist4");
   testList = free_list(testList);
   printf("\nlist after free_list:\n");
   print_list(testList);
+
+  //============================================================================================
+  
   printf("===============================\n\n");
   printf("MUSIC LIBRARY TESTS\n\n");
   printf("===============================\n");
-  
+  printf("testing print_library\n");
+  printf("===============================\n");
+  printf("Testing print_letter\n");
+  printf("===============================\n");
+  printf("Testing find\n");
+  printf("===============================\n");
+  printf("Testing find_artist\n");
+  printf("===============================\n");
+  printf("Testing remove_song\n");
+  printf("===============================\n");
+  printf("Testing clear_library\n");
+  //fxn call
+  printf("Library after clear:\n");
+  printf("===============================\n");
+  printf("Testing print_artist\n");
+  printf("===============================\n");
+  printf("Testing shuffle\n");
+  printf("===============================\n");
+ 
   return 0;
 
   

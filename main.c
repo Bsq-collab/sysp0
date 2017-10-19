@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "llist_headers.h"
+#include <time.h>
 #include <string.h>
+#include "playlist_headers.h"
+
 int main(){
 
   struct node * testList;
@@ -14,7 +17,7 @@ int main(){
   testList=  insert_front(testList,"song2","artist2");
   testList= insert_front(testList,"song3","artist3");
   
-testList= insert_front(testList,"song4","artist4");
+  testList= insert_front(testList,"song4","artist4");
   testList=  insert_front(testList,"song5","artist5");
   testList= insert_front(testList,"song6","artist6");
   

@@ -83,26 +83,28 @@ struct node * find_artist(struct node* h, char * singer){
   }
   return NULL;
 }
-
-struct node * find_rand(struct node* h){
-  if(h==NULL){
-    return NULL;
-  }
-  srand(time(NULL));//seed
+int length(struct node * h){
   int num=0;
   while(h){
     num+=1;
     h=h->next;
     printf("\nNum var: %d\n",num);
   }
+  return num;
+}
+
+struct node * find_rand(struct node* h){
+
+  srand(time(NULL));//seed
+  int num=length(h);
   printf("\npost loop Num var: %d\n",num);
 
-  int n=rand()%num;//0 to num-1
-  printf("this is n: %d\n",n);
-  while(n){
-    printf("why isn't this working...");
+  int randNum=rand()%num;//0 to num-1
+  printf("this is randNum: %d\n",randNum);
+  while(randNum){
+    // printf("why isn't this working...");
     h=h->next;
-    n-=1;
+    randNum-=1;
   }
   return h;  
 }

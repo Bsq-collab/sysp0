@@ -12,13 +12,15 @@ int main(){
   testList= insert_front(testList,"song1","artist1");
   testList=  insert_front(testList,"song2","artist2");
   testList= insert_front(testList,"song3","artist3");
-  testList= insert_front(testList,"song4","artist4");
+  
+testList= insert_front(testList,"song4","artist4");
   testList=  insert_front(testList,"song5","artist5");
   testList= insert_front(testList,"song6","artist6");
+  
   testList= insert_front(testList,"song7","artist7");
   testList=  insert_front(testList,"song8","artist8");
   testList= insert_front(testList,"song9","artist9");
-
+  
   printf("===============================\n");
 
   printf("Testing print_list:\n");

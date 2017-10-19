@@ -24,3 +24,5 @@ struct node * find_rand(struct node*);
 struct node * remove_node(struct node *,char *);
 
 struct node * free_list(struct node *);
+
+int length(struct node * h);

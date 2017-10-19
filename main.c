@@ -8,16 +8,19 @@ int main(){
   printf("LINKED LIST TESTS\n");
   printf("===============================\n");
 
+  printf("testing insert_front:\n");
   testList= insert_front(testList,"song1","artist1");
   testList=  insert_front(testList,"song2","artist2");
   testList= insert_front(testList,"song3","artist3");
-   testList= insert_front(testList,"song4","artist4");
+  testList= insert_front(testList,"song4","artist4");
   testList=  insert_front(testList,"song5","artist5");
   testList= insert_front(testList,"song6","artist6");
-   testList= insert_front(testList,"song7","artist7");
+  testList= insert_front(testList,"song7","artist7");
   testList=  insert_front(testList,"song8","artist8");
   testList= insert_front(testList,"song9","artist9");
-  
+
+  printf("===============================\n");
+
   printf("Testing print_list:\n");
   print_list(testList);
 
@@ -36,22 +39,26 @@ int main(){
   printf("Finding Song4....\n\n");
   print_list(find_song(testList,"song4","artist4"));
 
-  // printf("\n\nFinding song that doesnt exist....\n");THIS DOESNT WORK YET
+  //printf("\n\nFinding song that doesnt exist....\n");//THIS DOESNT WORK YET
   // print_list(find_song(testList,"so","art"));
-  
-  
-  /*
+   
   printf("===============================\n");
-
   printf("Testing find_artist\n");
+  printf("finding artist3....\n\n");
+  print_list(find_artist(testList,"artist3"));
+  printf("finding nonexistent artist....\n");
+  print_list(find_artist(testList,"lalaloopsiehead"));
+  
+/*
   printf("===============================\n");
   printf("Testing songcmp(helper function):\n");
-
+*/
   printf("===============================\n");
 
   printf("Testing random\n");
+  print_node(find_rand(testList));
   printf("===============================\n");
-  printf("Testing remove\n");
+  /*printf("Testing remove\n");
   printf("===============================\n");
   printf("Testing free_list");
   //free_list()

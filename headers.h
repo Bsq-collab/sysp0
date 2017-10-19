@@ -13,11 +13,11 @@ void print_node(struct node*);
 
 struct node * insert_front(struct node *, char *,char *);
 
-struct node * insert_order(char *, char *);
+struct node * insert_order(struct node*,char *, char *);
 
 struct node * find_song(struct node*,char *, char *);
 
-struct node * find_first_artist_song(struct node*, char *);
+struct node * find_artist(struct node*, char *);
 
 struct node * find_rand(struct node*);
 

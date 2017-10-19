@@ -6,14 +6,14 @@
 
 
 void print_node(struct node * n){
-  printf("Title: %s\t Artist: %s\n",n->name,n->artist);
+  printf("Title: %s\t Artist: %s-->\n",n->name,n->artist);
   }
 void print_list(struct node * ptr){
   while (ptr){//null= false`
     print_node(ptr);
     ptr=ptr->next;
   }
-  printf("null\n");
+  printf("NULL\n");
 }
 
 struct node * insert_front(struct node * n, char * song, char * singer){
@@ -24,25 +24,88 @@ struct node * insert_front(struct node * n, char * song, char * singer){
   head->next= n;  
   return head;
 }
+
 /*
-struct node * insert_order(char * song, char * singer){
-  char * start_char;
+struct node * insert_order(struct node *head, char * song, char * singer){
+  int artcmp= strcmp(head->artist, singer);
+  int songcmp= strcmp(head->name,song);
+
+  if(head|| artcmp<0||(artcmp==0&&songcmp<0)){
+    return insert_front(head,song,singer);
+  }
+
+  struct node* temp= head; 
+  while(head->next){//while it still has a next node
+    struct node* tmpNext=head->next;
+    int acmp= strcmp(singer,tmpNext->artist);
+    int scmp= strcmp(song, tmpNext->name);
+
+    if(acmp<0||(acmp==0&& scmp<0)){
+      //if it's a negative cmp num or the comparison to the next one is 0 for artist and
+      //the name is negative then add at the next slot.
+      head->next= insert_front(head->next,song,singer);
+      return temp;
+    }
+    head= head->next;  
+  }
+  struct node * addToEnd= (struct node*)malloc(sizeof(struct node));
+  head->next=addToEnd;
+  strcpy(addToEnd->name,song);
+  strcpy(addToEnd->artist,singer);
+  return temp;
+}
+*/      
+  /*char * start_char;
   strncpy(start_char,singer,1);
   struct node new;
   new.name = song;
   new.artist = singer;
   new.next = 0;
   struct node * tmp = table;
-  }
-*/
+  }*/
+
 struct node * find_song(struct node* h,char * title, char * artist){
+  //while(h){
   while(strcmp(h->name,title)&&strcmp(h->artist,artist)){
     h=h->next;
   }
   return h;
+  // }
+  // return NULL;
 }
 
+struct node * find_artist(struct node* h, char * singer){
+  while(h){
+    if(!strcmp(singer, h->artist)){
+      return h;
+    }
+    h=h->next;//increment...
+  }
+  return NULL;
+}
 
+struct node * find_rand(struct node* h){
+  if(h==NULL){
+    return NULL;
+  }
+  srand(time(NULL));//seed
+  int num=0;
+  while(h){
+    num+=1;
+    h=h->next;
+    printf("\nNum var: %d\n",num);
+  }
+  printf("\npost loop Num var: %d\n",num);
+
+  int n=rand()%num;//0 to num-1
+  printf("this is n: %d\n",n);
+  while(n){
+    printf("why isn't this working...");
+    h=h->next;
+    n-=1;
+  }
+  return h;  
+}
 
 //=========================Extra Code???========================//
 

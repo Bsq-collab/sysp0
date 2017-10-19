@@ -61,11 +61,11 @@ testList= insert_front(testList,"song4","artist4");
   print_node(find_rand(testList));
   printf("===============================\n");
   printf("Testing remove\n");
-  printf("testing removal of first node...\n");
+  printf("testing removal of first node(song9)...\n");
   testList=remove_node(testList,"song9","artist9");
   print_list(testList);
 
-  printf("\ntesting removal of middle node...\n");
+  printf("\ntesting removal of middle node(song5)...\n");
   testList=remove_node(testList,"song5","artist5");
   print_list(testList);
 

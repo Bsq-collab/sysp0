@@ -135,6 +135,9 @@ struct node * remove_node(struct node *h,char *song,char*singer){
       remove_end_mid(h,song,singer);
     }
 }
+
+
+struct node * free_list(struct node *);
 //=========================Extra Code???========================//
 
 

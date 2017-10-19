@@ -18,11 +18,12 @@ struct node * insert_order(struct node*,char *, char *);
 struct node * find_song(struct node*,char *, char *);
 
 struct node * find_artist(struct node*, char *);
-
+int length(struct node * h);
 struct node * find_rand(struct node*);
 
 struct node * remove_node(struct node *,char *,char*);
 struct node * remove_beginning(struct node*, char*, char*);
+struct node * remove_end_mid(struct node*, char*, char*);
 struct node * free_list(struct node *);
 
-int length(struct node * h);
+

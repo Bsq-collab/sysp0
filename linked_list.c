@@ -10,7 +10,7 @@ void print_node(struct node * n){
   }
 void print_list(struct node * ptr){
   while (ptr){//null= false`
-    printf("Title: %s\t Artist: %s \n",ptr-> name, ptr-> artist);
+    print_node(ptr);
     ptr=ptr->next;
   }
   printf("null\n");
@@ -21,7 +21,6 @@ struct node * insert_front(struct node * n, char * song, char * singer){
   strcpy(head->name, song);
   strcpy(head->artist, singer);
   printf("\ninserted %s\n", head->name);
-  //printf("Title: %s\t Artist: %s \n",head-> name, head-> artist);
   head->next= n;  
   return head;
 }
@@ -37,13 +36,29 @@ struct node * insert_order(char * song, char * singer){
   }
 */
 struct node * find_song(struct node* h,char * title, char * artist){
-  
   while(strcmp(h->name,title)&&strcmp(h->artist,artist)){
     h=h->next;
   }
   return h;
+}
 
+
+
+//=========================Extra Code???========================//
+
+
+/*
+struct node * insert_order(char * song, char * singer){
+  char * start_char;
+  strncpy(start_char,singer,1);
+  struct node new;
+  new.name = song;
+  new.artist = singer;
+  new.next = 0;
+  struct node * tmp = table;
   }
+*/
+
 /*
 struct node * find_song(char * title, char * artist){
   char * start_char;
@@ -62,8 +77,6 @@ struct node * find_song(char * title, char * artist){
   }
   
   return 0;
-  
-}
 
 struct node * find_first_artist_song(char * singer){
 

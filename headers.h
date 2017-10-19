@@ -9,6 +9,7 @@ struct node{
 struct node * table[26];
 
 void print_list(struct node*);
+void print_node(struct node*);
 
 struct node * insert_front(struct node *, char *,char *);
 

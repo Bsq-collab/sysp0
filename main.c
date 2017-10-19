@@ -21,11 +21,11 @@ int main(){
   printf("Testing print_list:\n");
   print_list(testList);
 
-  /* printf("===============================\n");
+  printf("===============================\n");
   printf("Testing print_node:\n");
-
-  //print_node();
-  */  
+  
+  print_node(testList);
+   
   printf("===============================\n");
   printf("Testing find_song\n");
   

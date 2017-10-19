@@ -5,7 +5,8 @@
 int main(){
 
   struct node * testList;
-  printf("LINKED LIST TESTS\n");
+   printf("===============================\n\n");
+  printf("LINKED LIST TESTS\n\n");
   printf("===============================\n");
 
   printf("testing insert_front:\n");
@@ -70,14 +71,14 @@ testList= insert_front(testList,"song4","artist4");
   print_list(testList);
 
   printf("===============================\n");
-  /*printf("Testing free_list");
-  //free_list()
+  printf("Testing free_list");
+  testList = free_list(testList);
   printf("\nlist after free_list:\n");
-  //print_list(testList);
+  print_list(testList);
+  printf("===============================\n\n");
+  printf("MUSIC LIBRARY TESTS\n\n");
   printf("===============================\n");
-  printf("MUSIC LIBRARY TESTS");
-  printf("===============================\n");
-  */
+  
   return 0;
 
   

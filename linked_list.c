@@ -24,7 +24,7 @@ struct node * insert_front(struct node * n, char * song, char * singer){
   head->next= n;  
   return head;
 }
-
+//===========+++INSERT ORDER LEFT=======================//
 /*
 struct node * insert_order(struct node *head, char * song, char * singer){
   int artcmp= strcmp(head->artist, singer);
@@ -137,7 +137,16 @@ struct node * remove_node(struct node *h,char *song,char*singer){
 }
 
 
-struct node * free_list(struct node *);
+struct node * free_list(struct node *h){
+  while(h){
+    struct node * next = h-> next;
+    free(h);
+    h = next;
+  }
+  return h;
+}
+
+
 //=========================Extra Code???========================//
 
 

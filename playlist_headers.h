@@ -1,5 +1,5 @@
 
-
+/*
 void print_library();
 
 void print_letter(char);
@@ -18,3 +18,4 @@ void add_song(char*,char*);
 
 void shuffle(int);
 
+*/

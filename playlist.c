@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include "llist_headers.h"
 #include <time.h>
@@ -33,3 +33,4 @@ void add_song(char*song,char*singer){
 
 void shuffle(int number){
 }
+*/

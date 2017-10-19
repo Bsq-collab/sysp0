@@ -109,6 +109,32 @@ struct node * find_rand(struct node* h){
   return h;  
 }
 
+struct node * remove_beginning(struct node * h,char * song,char * singer){
+    struct node * upNext=h->next;
+    free(h);
+    return upNext;
+}
+struct node * remove_end_mid(struct node*h, char*song, char*singer){
+  struct node * head= h;
+  while(h->next){
+    struct node * upNext=h->next;
+    if(!strcmp(song,upNext->name) && !(strcmp(singer,upNext->artist))){
+      struct node * nexter= upNext->next;
+      free(h->next);
+      h->next=nexter;
+      return head;
+    }
+    h=h->next;
+  }
+}
+struct node * remove_node(struct node *h,char *song,char*singer){
+    if(!strcmp(song,h->name)&&!strcmp(singer,h->artist)){
+      remove_beginning(h,song,singer);
+    }
+    else{
+      remove_end_mid(h,song,singer);
+    }
+}
 //=========================Extra Code???========================//
 
 

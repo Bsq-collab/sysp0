@@ -60,9 +60,17 @@ testList= insert_front(testList,"song4","artist4");
   printf("Testing random\n");
   print_node(find_rand(testList));
   printf("===============================\n");
-  /*printf("Testing remove\n");
+  printf("Testing remove\n");
+  printf("testing removal of first node...\n");
+  testList=remove_node(testList,"song9","artist9");
+  print_list(testList);
+
+  printf("\ntesting removal of middle node...\n");
+  testList=remove_node(testList,"song5","artist5");
+  print_list(testList);
+
   printf("===============================\n");
-  printf("Testing free_list");
+  /*printf("Testing free_list");
   //free_list()
   printf("\nlist after free_list:\n");
   //print_list(testList);

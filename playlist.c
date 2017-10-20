@@ -31,27 +31,46 @@ void print_letter(char letter){
 }
 
 void print_artist(char * singer){
-  
+  struct node* ans= search_artist(singer);
+  if(ans){//if it's not null
+    while(ans){
+      if(strcmp(singer,ans->artist)==0){
+	print_node(ans);
+	ans=ans->next;
+      }
+    }
+    else{
+      printf("no songs by this artist\n");
 }
 
 void print_library(){
+  int index= 0;
+  while(index<26){
+    if(table[i]){
+      print_letter('a'+i);
+      i+=1;	
+  }
+}
+
+  /*void shuffle(int number){
+  srand(time(NULL));
   
-}
-
-void shuffle(int number){
-}
+  }*/
 
 
 
 
 
-void remove_song(char*song,char*singer){
+void remove(char*song,char*singer){
+  table[singer[0]-'a']=remove_node(table[singer[0]-'a'],song,artist);
 }
 
 void clear_library(){
-}
-
-
+  int i=0;
+  while(i<26){
+    table[i]=free_list(table[i]);
+    i+=1;
+  }
 }
 
 

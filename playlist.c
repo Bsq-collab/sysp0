@@ -43,10 +43,12 @@ void print_artist(char * singer){
     printf("no songs by this artist\n");
   }
 }
-void print_library(struct node* table[26]){
+void print_library(struct node* table[27]){
   int index= 0;
-  while(index<26){
-      print_list(table[index]);
+  while(index<=27){
+    //print_list(table[index]);
+    //print_list(table);
+    //table++;
       index+=1;	
     }
 }

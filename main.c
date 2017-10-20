@@ -107,8 +107,9 @@ int main(){
   printf("===============================\n");
   printf("\ntesting print_letter(m)\n");
   print_letter('m');
-  //printf("===============================\n");
-  //print_library(library);
+  printf("===============================\n");
+  printf("printing library....\n\n");
+  print_library(library);
 
   printf("===============================\n");
   printf("Testing find(twilight,elo)...\n");
@@ -127,9 +128,12 @@ int main(){
   printf("\n");
   remove_song("twilight","elo");
   print_letter('e');
-  
+  printf("\nremoving nonexistent song....\n");
+  remove_song("lalal","exa");
+  print_letter('e');
   printf("===============================\n");
   printf("Testing clear_library\n");
+  
   //fxn call
   printf("Library after clear:\n");
   printf("===============================\n");

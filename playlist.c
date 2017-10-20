@@ -44,15 +44,18 @@ void print_artist(char * singer){
   }
 }
 void print_library(struct node* table[27]){
-  
-  int index= 0;
-  while(index<=26){
-    if(!table[index]){
-      print_list(table[index]);
+  char c='a';
+  int index= c;
+  while(index-'a'<=26){
+    // printf("inside the while of library loop");
+    if(!table[index-93]){
+      //  printf("inside the if statement\nprinting list for %c\n",c);
+      print_letter(c);
     }  
       //print_list(table);
       //table++;
-      index+=1;	
+      index+=1;
+      c+=1;
   }
 }
 

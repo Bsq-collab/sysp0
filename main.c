@@ -112,6 +112,8 @@ int main(){
   printf("===============================\n");
   printf("\ntesting print_letter(m)\n");
   print_letter('m');
+  printf("Line 115... before printing library\n");
+  
   printf("===============================\n");
   printf("printing library....\n\n");
   print_library(library);

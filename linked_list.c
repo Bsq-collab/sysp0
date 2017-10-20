@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "llist_headers.h"
-
+#include "playlist_headers.h"
 
 void print_node(struct node * n){
   printf("Title: %s\t Artist: %s-->\n",n->name,n->artist);

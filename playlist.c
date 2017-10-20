@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "llist_headers.h"
 #include <time.h>
 #include <string.h>
 #include "playlist_headers.h"
-
-song_node * table[26];
+#include "llist_headers.h"
+struct node * table[27];
 //char-'a'=> index bc ASCII
 
 void add_song(char*song,char*singer){
@@ -18,7 +17,7 @@ struct node * find(char* song,char* singer){
   return ans;
 }
 
-struct node * find_artist(char* singer){
+struct node * search_artist(char* singer){
   struct node* letter= table[singer[0]-'a'];
   struct node* ans= find_artist(letter, singer);
   return ans;
@@ -39,30 +38,27 @@ void print_artist(char * singer){
 	ans=ans->next;
       }
     }
-    else{
-      printf("no songs by this artist\n");
+  }
+  else{
+    printf("no songs by this artist\n");
+  }
 }
-
 void print_library(){
   int index= 0;
   while(index<26){
-    if(table[i]){
-      print_letter('a'+i);
-      i+=1;	
+    if(table[index]){
+      print_letter('a'+index);
+      index+=1;	
+    }
   }
 }
-
-  /*void shuffle(int number){
+/*void shuffle(int number){
   srand(time(NULL));
   
   }*/
 
-
-
-
-
-void remove(char*song,char*singer){
-  table[singer[0]-'a']=remove_node(table[singer[0]-'a'],song,artist);
+void remove_song(char*song,char*singer){
+  table[singer[0]-'a']=remove_node(table[singer[0]-'a'],song,singer);
 }
 
 void clear_library(){

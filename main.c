@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "llist_headers.h"
 #include <time.h>
 #include <string.h>
 #include "playlist_headers.h"
-
+#include "llist_headers.h"
 int main(){
 
   struct node * testList = 0;
@@ -53,7 +52,6 @@ int main(){
   print_list(find_song(testList,"shape of you","ed sheeran"));
 
   printf("\n\nFinding song that doesnt exist....\n");
-    //THIS DOESNT WORK YET
   print_list(find_song(testList,"so","art"));
    
   printf("===============================\n");
@@ -93,12 +91,16 @@ int main(){
   printf("MUSIC LIBRARY TESTS\n\n");
   printf("===============================\n");
   printf("testing print_library\n");
-  printf("===============================\n");
+  print_library();
+  printf("\n===============================\n");
   printf("Testing print_letter\n");
+  print_letter('s');
   printf("===============================\n");
   printf("Testing find\n");
+  find("stitches", "shawn mendes");
   printf("===============================\n");
   printf("Testing find_artist\n");
+  search_artist("shawn mendes");
   printf("===============================\n");
   printf("Testing remove_song\n");
   printf("===============================\n");

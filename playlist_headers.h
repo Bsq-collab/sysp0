@@ -3,7 +3,7 @@ void add_song(char*song,char*singer);
 
 struct node * find(char* song,char* singer);
 
-struct node * find_artist(char* singer);
+struct node * search_artist(char* singer);
 
 void print_letter(char letter);
 

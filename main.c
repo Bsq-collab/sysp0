@@ -7,24 +7,25 @@
 
 int main(){
 
-  struct node * testList;
+  struct node * testList = 0;
    printf("===============================\n\n");
   printf("LINKED LIST TESTS\n\n");
   printf("===============================\n");
 
-  printf("testing insert_front:\n");
-  testList= insert_front(testList,"song1","artist1");
-  testList=  insert_front(testList,"song2","artist2");
-  testList= insert_front(testList,"song3","artist3");
+  printf("testing insert:\n");
+  testList= insert_order(testList,"shape of you","ed sheeran");
+  testList=  insert_order(testList,"sugar","maroon5");
+  testList= insert_order(testList,"stiches","shawn mendes");
   
-  testList= insert_front(testList,"song4","artist4");
-  testList=  insert_front(testList,"song5","artist5");
-  testList= insert_front(testList,"song6","artist6");
+  testList= insert_order(testList,"chained to the rhythm","katy perry");
+  testList=  insert_order(testList,"animals","maroon5");
+  testList= insert_order(testList,"roar","katy perry");
   
-  testList= insert_front(testList,"song7","artist7");
+    testList = insert_order(testList, "despacito", "dy");
+ /* testList= insert_front(testList,"song7","artist7");
   testList=  insert_front(testList,"song8","artist8");
   testList= insert_front(testList,"song9","artist9");
-  
+  */
   printf("===============================\n");
 
   printf("Testing print_list:\n");
@@ -34,23 +35,31 @@ int main(){
   printf("Testing print_node:\n");
   
   print_node(testList);
+    /*
+  printf("===============================\n");
+  printf("Testing insert_order:\n");
+    testList = insert_order(testList, "Despacito", "DY");
+    print_list(testList);
+*/
+
    
   printf("===============================\n");
   printf("Testing find_song\n");
   
-  printf("Finding Song3....\n\n");
-  print_list(find_song(testList,"song3","artist3"));
+  printf("Finding despacito....\n\n");
+  print_list(find_song(testList,"despacito","dy"));
 
-  printf("Finding Song4....\n\n");
-  print_list(find_song(testList,"song4","artist4"));
+  printf("Finding shape of you....\n\n");
+  print_list(find_song(testList,"shape of you","ed sheeran"));
 
-  //printf("\n\nFinding song that doesnt exist....\n");//THIS DOESNT WORK YET
-  // print_list(find_song(testList,"so","art"));
+  printf("\n\nFinding song that doesnt exist....\n");
+    //THIS DOESNT WORK YET
+  print_list(find_song(testList,"so","art"));
    
   printf("===============================\n");
   printf("Testing find_artist\n");
-  printf("finding artist3....\n\n");
-  print_list(find_artist(testList,"artist3"));
+  printf("finding katy perry....\n\n");
+  print_list(find_artist(testList,"katy perry"));
   printf("finding nonexistent artist....\n");
   print_list(find_artist(testList,"lalaloopsiehead"));
   
@@ -64,12 +73,12 @@ int main(){
   print_node(find_rand(testList));
   printf("===============================\n");
   printf("Testing remove\n");
-  printf("testing removal of first node(song9)...\n");
-  testList=remove_node(testList,"song9","artist9");
+  printf("testing removal of first node(stitches)...\n");
+  testList=remove_node(testList,"stitches","shawn mendes");
   print_list(testList);
 
-  printf("\ntesting removal of middle node(song5)...\n");
-  testList=remove_node(testList,"song5","artist5");
+  printf("\ntesting removal of middle node(sugar...\n");
+  testList=remove_node(testList,"sugar","maroon5");
   print_list(testList);
 
   printf("===============================\n");

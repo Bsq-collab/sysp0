@@ -9,11 +9,47 @@ void print_node(struct node * n){
   printf("Title: %s\t Artist: %s-->\n",n->name,n->artist);
   }
 void print_list(struct node * ptr){
-  while (ptr){//null= false`
+  while (ptr){//null= false
     print_node(ptr);
     ptr=ptr->next;
   }
   printf("NULL\n");
+}
+
+struct node * insert_order(struct node * n, char * song, char * singer){
+    
+    struct node * newSong = (struct node *)malloc(sizeof(struct node));
+
+    strcpy(newSong->name, song);
+    strcpy(newSong->artist, singer);
+    newSong->next = 0;
+    
+    
+    if(!n){
+        return newSong;
+    }
+    
+    if(strcmp(song,n->name) < 0){
+        return (insert_front(n, song, singer));
+    }
+    
+    struct node * tmp = n;
+    struct node * nextNode = tmp->next;
+    while (nextNode){
+        if(strcmp(song,nextNode->name) < 0){
+            tmp->next = newSong;
+            newSong->next = nextNode;
+            //tmp = insert_front(tmp, song, singer);
+            return n;
+        }
+        else{
+            tmp = nextNode;
+            nextNode = nextNode->next;
+        }
+    }
+    tmp->next = newSong;
+    return n;
+    
 }
 
 struct node * insert_front(struct node * n, char * song, char * singer){
@@ -26,12 +62,19 @@ struct node * insert_front(struct node * n, char * song, char * singer){
 }
 
 struct node * find_song(struct node* h,char * title, char * artist){
-  //while(h){
+  while(h){
+      if(!(strcmp(title, h->name))){
+          return h;
+      }
+      else
+          h = h->next;
+    /*
   while(strcmp(h->name,title)&&strcmp(h->artist,artist)){
     h=h->next;
   }
   return h;
-  // }
+     */
+   }
   // return NULL;
 }
 
@@ -87,13 +130,14 @@ struct node * remove_end_mid(struct node*h, char*song, char*singer){
     }
     h=h->next;
   }
+    return h;
 }
 struct node * remove_node(struct node *h,char *song,char*singer){
     if(!strcmp(song,h->name)&&!strcmp(singer,h->artist)){
-      remove_beginning(h,song,singer);
+      return(remove_beginning(h,song,singer));
     }
     else{
-      remove_end_mid(h,song,singer);
+      return(remove_end_mid(h,song,singer));
     }
 }
 

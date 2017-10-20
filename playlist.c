@@ -8,7 +8,7 @@ struct node * table[27];
 //char-'a'=> index bc ASCII
 
 void add_song(char*song,char*singer){
-  table[singer[0]-'a']=insert_order(table[singer[0]-'a'],song,singer);
+  table[singer[0]-'a']=insert_front(table[singer[0]-'a'],song,singer);
   printf("added song %s\n\n",song);
 }
 struct node * find(char* song,char* singer){//doesn't work if nonexistent
@@ -44,13 +44,16 @@ void print_artist(char * singer){
   }
 }
 void print_library(struct node* table[27]){
+  
   int index= 0;
-  while(index<=27){
-    //print_list(table[index]);
-    //print_list(table);
-    //table++;
+  while(index<=26){
+    if(!table[index]){
+      print_list(table[index]);
+    }  
+      //print_list(table);
+      //table++;
       index+=1;	
-    }
+  }
 }
 
 /*

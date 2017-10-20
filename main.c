@@ -96,7 +96,12 @@ int main(){
   
 
   printf("testing print_library\n");
-  struct node* library[26];
+  struct node* library[27];
+  //int x=0;
+  //  while (x<=26){
+  library[26]=NULL;
+  //x+=1;
+  //}
   add_song("turn to stone","elo");
   add_song("twilight","elo");
   add_song("take a chance on me", "abba");

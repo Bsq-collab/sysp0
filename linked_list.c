@@ -74,8 +74,10 @@ struct node * find_song(struct node* h,char * title, char * artist){
   }
   return h;
      */
-   }
-  // return NULL;
+  }
+  return h;
+  
+  //return NULL;
 }
 
 struct node * find_artist(struct node* h, char * singer){

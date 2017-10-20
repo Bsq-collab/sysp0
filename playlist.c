@@ -4,14 +4,14 @@
 #include <string.h>
 #include "playlist_headers.h"
 #include "llist_headers.h"
-struct node * table[26];
+struct node * table[27];
 //char-'a'=> index bc ASCII
 
 void add_song(char*song,char*singer){
-  table[singer[0]-'a']=insert_front(table[singer[0]-'a'],song,singer);
+  table[singer[0]-'a']=insert_order(table[singer[0]-'a'],song,singer);
   printf("added song %s\n\n",song);
 }
-struct node * find(char* song,char* singer){
+struct node * find(char* song,char* singer){//doesn't work if nonexistent
   struct node * letter= table[singer[0]-'a'];
   struct node * ans= find_song(letter,song,singer);
   return ans;

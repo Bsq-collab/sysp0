@@ -97,29 +97,37 @@ int main(){
 
   printf("testing print_library\n");
   struct node* library[26];
-  add_song("twilight","elo");
   add_song("turn to stone","elo");
+  add_song("twilight","elo");
   add_song("take a chance on me", "abba");
   add_song("goodbye stranger","super tramp");
   add_song("dancing queen","abba");
-  add_song("billy gean","michael jackson");
+  add_song("ailly jean","michael jackson");
   add_song("beat it", "michael jackson");
   printf("===============================\n");
   printf("\ntesting print_letter(m)\n");
   print_letter('m');
-  printf("===============================\n");
+  //printf("===============================\n");
   //print_library(library);
-  printf("\n===============================\n");
-  printf("Testing print_letter\n");
-  //print_letter('s');
+
   printf("===============================\n");
-  printf("Testing find\n");
-  //find("stitches", "shawn mendes");
+  printf("Testing find(twilight,elo)...\n");
+  print_node(find("twilight", "elo"));
+  printf("\nTesting nonexistent song...\n");
+  //print_node(find("lalala","akala"));
   printf("===============================\n");
-  printf("Testing find_artist\n");
-  //search_artist("shawn mendes");
+  printf("Testing find_artist elo....\n");
+  print_node( search_artist("elo"));
+
+  printf("nonexistent artist...\n");
+  //print_node(search_artist("lalala"));
   printf("===============================\n");
-  printf("Testing remove_song\n");
+  printf("Testing remove_songtwilight,elo)....\n");
+  print_letter('e');
+  printf("\n");
+  remove_song("twilight","elo");
+  print_letter('e');
+  
   printf("===============================\n");
   printf("Testing clear_library\n");
   //fxn call

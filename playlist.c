@@ -4,12 +4,12 @@
 #include <string.h>
 #include "playlist_headers.h"
 #include "llist_headers.h"
-struct node * table[27];
+struct node * table[26];
 //char-'a'=> index bc ASCII
 
 void add_song(char*song,char*singer){
   table[singer[0]-'a']=insert_front(table[singer[0]-'a'],song,singer);
-  printf("added song %s",song);
+  printf("added song %s\n\n",song);
 }
 struct node * find(char* song,char* singer){
   struct node * letter= table[singer[0]-'a'];
@@ -43,19 +43,20 @@ void print_artist(char * singer){
     printf("no songs by this artist\n");
   }
 }
-void print_library(){
+void print_library(struct node* table[26]){
   int index= 0;
   while(index<26){
-    if(table[index]){
-      print_letter('a'+index);
+      print_list(table[index]);
       index+=1;	
     }
-  }
 }
-/*void shuffle(int number){
+
+/*
+void shuffle(int number){
   srand(time(NULL));
   
-  }*/
+  }
+*/
 
 void remove_song(char*song,char*singer){
   table[singer[0]-'a']=remove_node(table[singer[0]-'a'],song,singer);

@@ -90,17 +90,34 @@ int main(){
   printf("===============================\n\n");
   printf("MUSIC LIBRARY TESTS\n\n");
   printf("===============================\n");
+  printf("initializing/adding songs...");
+
+  
+  
+
   printf("testing print_library\n");
-  print_library();
+  struct node* library[26];
+  add_song("twilight","elo");
+  add_song("turn to stone","elo");
+  add_song("take a chance on me", "abba");
+  add_song("goodbye stranger","super tramp");
+  add_song("dancing queen","abba");
+  add_song("billy gean","michael jackson");
+  add_song("beat it", "michael jackson");
+  printf("===============================\n");
+  printf("\ntesting print_letter(m)\n");
+  print_letter('m');
+  printf("===============================\n");
+  //print_library(library);
   printf("\n===============================\n");
   printf("Testing print_letter\n");
-  print_letter('s');
+  //print_letter('s');
   printf("===============================\n");
   printf("Testing find\n");
-  find("stitches", "shawn mendes");
+  //find("stitches", "shawn mendes");
   printf("===============================\n");
   printf("Testing find_artist\n");
-  search_artist("shawn mendes");
+  //search_artist("shawn mendes");
   printf("===============================\n");
   printf("Testing remove_song\n");
   printf("===============================\n");

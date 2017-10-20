@@ -1,4 +1,3 @@
-
 void add_song(char*song,char*singer);
 
 struct node * find(char* song,char* singer);

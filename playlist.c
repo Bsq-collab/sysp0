@@ -13,9 +13,10 @@ void add_song(char*song,char*singer){
     //insert_order(tmp, song, singer);
   printf("added song %s\n\n",song);
 }
-struct node * find(char* song,char* singer){//doesn't work if nonexistent
+struct node * find(char* song,char* singer){
   struct node * letter= table[singer[0]-'a'];
   struct node * ans= find_song(letter,song,singer);
+  // print_node( ans );
   return ans;
 }
 

@@ -7,7 +7,7 @@
 int main(){
 
   struct node * testList = 0;
-   printf("===============================\n\n");
+  printf("===============================\n\n");
   printf("LINKED LIST TESTS\n\n");
   printf("===============================\n");
 
@@ -124,14 +124,14 @@ int main(){
 
   printf("===============================\n");
   printf("Testing find(twilight,elo)...\n");
-  print_node(find("twilight", "elo"));
-  printf("\nTesting nonexistent song...\n");
-  //print_node(find("lalala","akala"));
+  find("twilight", "elo");
+  //printf("\nTesting nonexistent song...\n");
+  //find("lalala","akala");
   printf("===============================\n");
   printf("Testing find_artist elo....\n");
-  print_node( search_artist("elo"));
+  print_node(search_artist("elo"));
 
-  printf("nonexistent artist...\n");
+  //printf("nonexistent artist...\n");
   //print_node(search_artist("lalala"));
   printf("===============================\n");
   printf("Testing remove_songtwilight,elo)....\n");
@@ -143,14 +143,14 @@ int main(){
   remove_song("lalal","exa");
   print_letter('e');
   printf("===============================\n");
-    printf("Testing shuffle\n");
-    //shuffle(5);
-    shuffle(2);
-    printf("===============================\n");
+  printf("Testing shuffle\n");
+  //shuffle(5);
+  shuffle(2);
+  printf("===============================\n");
   printf("Testing clear_library\n");
-    clear_library;
-    printf("Printing Library after clear:\n");
-    print_library;
+  clear_library;
+  printf("Printing Library after clear:\n");
+  print_library;
 
  
   return 0;

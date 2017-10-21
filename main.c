@@ -142,7 +142,7 @@ int main(){
   print_letter('e');
   printf("===============================\n");
     printf("Testing shuffle\n");
-    shuffle(5);
+    shuffle(2);
     printf("===============================\n");
   printf("Testing clear_library\n");
   

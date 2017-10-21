@@ -64,10 +64,10 @@ void print_library(struct node* table[27]){
 
 void shuffle(int number){
     srand(time(NULL));
-    int rNum;
+    int rNum = 0;
 
     while (number-1){
-        rNum = rand()%27;
+        rNum = (int)(rand()%27);
         print_node(find_rand(table[rNum]));
         number--;
     }

@@ -125,14 +125,14 @@ int main(){
   printf("===============================\n");
   printf("Testing find(twilight,elo)...\n");
   find("twilight", "elo");
-  //printf("\nTesting nonexistent song...\n");
-  //find("lalala","akala");
+  printf("\nTesting nonexistent song...\n");
+  print_list(find("lalala","akala"));
   printf("===============================\n");
   printf("Testing find_artist elo....\n");
   print_node(search_artist("elo"));
 
-  //printf("nonexistent artist...\n");
-  //print_node(search_artist("lalala"));
+  printf("nonexistent artist...\n");
+  print_list(search_artist("lalala"));
   printf("===============================\n");
   printf("Testing remove_songtwilight,elo)....\n");
   print_letter('e');

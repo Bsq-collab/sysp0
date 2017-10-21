@@ -10,7 +10,8 @@ void print_node(struct node * n){
   }
 void print_list(struct node * ptr){
   while (ptr){//null= false
-    print_node(ptr);
+      printf("Title: %s\t Artist: %s-->\n",ptr->name,ptr->artist);
+    //print_node(ptr);
     ptr=ptr->next;
   }
   printf("NULL\n");
@@ -103,10 +104,10 @@ struct node * find_rand(struct node* h){
 
   srand(time(NULL));//seed
   int num=length(h);
-  printf("\npost loop Num var: %d\n",num);
+  //printf("\npost loop Num var: %d\n",num);
 
   int randNum=rand()%num;//0 to num-1
-  printf("this is randNum: %d\n",randNum);
+  //printf("this is randNum: %d\n",randNum);
   while(randNum){
     // printf("why isn't this working...");
     h=h->next;

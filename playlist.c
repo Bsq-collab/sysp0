@@ -5,7 +5,7 @@
 #include "playlist_headers.h"
 #include "llist_headers.h"
 struct node * table[27];
-//char-'a'=> index bc ASCII
+//char-'a'=> index bc ASCIIa
 
 void add_song(char*song,char*singer){
   table[singer[0]-'a']=insert_front(table[singer[0]-'a'],song,singer);
@@ -44,6 +44,7 @@ void print_artist(char * singer){
   }
 }
 void print_library(struct node* table[27]){
+    
   char c='a';
   int index= c;
   while(index-'a'<=26){
@@ -56,15 +57,23 @@ void print_library(struct node* table[27]){
       //table++;
       index+=1;
       c+=1;
-  }
+     }
 }
 
-/*
+
+
 void shuffle(int number){
-  srand(time(NULL));
-  
+    srand(time(NULL));
+    int rNum;
+
+    while (number-1){
+        rNum = rand()%27;
+        print_node(find_rand(table[rNum]));
+        number--;
+    }
+
   }
-*/
+
 
 void remove_song(char*song,char*singer){
   table[singer[0]-'a']=remove_node(table[singer[0]-'a'],song,singer);

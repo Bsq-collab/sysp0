@@ -116,8 +116,7 @@ int main(){
   
   printf("===============================\n");
   printf("printing library....\n\n");
-    printf("lib: %u\n",library);
-    printf("name: %s artist: %s",library[13]->name, library[13]->artist);
+
   print_library(library);
 
   printf("===============================\n");
@@ -142,17 +141,13 @@ int main(){
   print_letter('e');
   printf("===============================\n");
     printf("Testing shuffle\n");
-    shuffle(2);
+    //shuffle(5);
     printf("===============================\n");
   printf("Testing clear_library\n");
-  
-  //fxn call
-  printf("Library after clear:\n");
-  printf("===============================\n");
-  printf("Testing print_artist\n");
-  printf("===============================\n");
-  printf("Testing shuffle\n");
-  printf("===============================\n");
+    clear_library;
+    printf("Printing Library after clear:\n");
+    print_library;
+
  
   return 0;
 
